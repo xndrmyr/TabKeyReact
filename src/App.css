@@ -335,6 +335,7 @@ button {
   display: flex;
   flex-flow: column;
   margin: 25px 0;
+  touch-action: manipulation;
 }
 
 #buttonWrapper button {
@@ -679,6 +680,7 @@ Button {
   width: 100%;
   justify-content: center;
   transition: .3s;
+  touch-action: manipulation;
 }
 
 .whiteKey {
