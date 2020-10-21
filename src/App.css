@@ -63,7 +63,7 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 45px;
   color: #fefffe;
   background-color: rgba(20, 20, 20, 1);
@@ -81,21 +81,18 @@ body {
 }
 
 a.menu {
-  position: absolute;
   z-index: 3;
-  border:1px solid white;
   text-decoration: none;
-  top: 1.6em;
-  right: 1.6em;
-  color: #fff;
-  font-size: 0.65em;
-  padding: 0.4em 0.7em;
-  border-radius: 4px;
+  color: #fefffe;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 #menuButton {
   display: flex;
   width: 50%;
+  justify-content: flex-end;
+  margin-right: .75em;
 }
 
 nav {
@@ -108,7 +105,7 @@ nav {
 nav ul{
   display: flex;
   list-style: none;
-  width: 100vw;
+  width: 99vw;
   
 }
 nav ul li {
@@ -160,7 +157,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   font-family: 'Roboto', sans-serif;
-  padding: 10px 0
+
 }
 
 /* Fallbacks */
@@ -321,7 +318,7 @@ button {
 #buttonWrapper {
   display: flex;
   flex-flow: column;
-  margin: 10% 0;
+  margin: 25px 0;
 }
 
 #buttonWrapper button {
@@ -339,7 +336,8 @@ Button {
 
 .userButton {
   width: 50%;
-  height: 10vh;
+  min-height: 90px;
+  height: 10%;
   background-color: transparent;
 }
 
@@ -627,10 +625,11 @@ Button {
 /*  PIANO VIEW STYLES  */
 #pianoWrapper {
   display: flex;
+  flex-flow: column;
   justify-content: center;
   width: 100%;
+  min-height: 200px;
   height: 100%;
-  flex-flow: column;
   align-items: center;
 }
 
@@ -657,16 +656,6 @@ Button {
 
 @keyframes spin { 20%, 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-#pianoWrapper {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  margin-top: 25px
-}
-
 #keyboard {
   display: flex;
   height: 200px;
@@ -674,6 +663,7 @@ Button {
   justify-content: center;
   transition: .3s;
   z-index: 0;
+  margin-top: 45px;
 }
 
 .whiteKey {
@@ -704,7 +694,7 @@ Button {
   display: flex;
   font-size: 1.5em;
   border-radius: 100px;
-  height: 25%;
+  height: 30%;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -723,10 +713,9 @@ Button {
 .blackKey {
   display: flex;
   background-color: black;
-  max-height: 100px;
   height: 100%;
-  width: 5%;
-  margin: 0 1%;
+  width: 4%;
+  margin: 0 1.5%;
   justify-content: center;
   align-items: flex-end;
 }
@@ -772,13 +761,15 @@ Button {
   display: flex;
   width: 100%;
   height: 100%;
-  min-height: 100px;
+  min-height: 130px;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 #pianoReset {
   display: flex;
   width: 25%;
+  max-height: 130px;
 }
 
 #pianoReset button {
@@ -821,7 +812,9 @@ Button {
   height: 100%;
   width: 100%;
   align-items: center;
-  min-height: 50px
+  justify-content: center;
+  min-height: 50px;
+  text-shadow: 2px 2px 2px black
 }
 
 #scaleRoot span {
@@ -836,6 +829,8 @@ Button {
   display: flex;
   width: 40%;
   flex-flow: column;
+  font-size: .825em;
+  justify-content: center;
 }
 
 #modeTable .row {
@@ -848,12 +843,11 @@ Button {
   align-items: flex-start;
 }
 
-#keyboard,
-#pianoBottomBar {
-  display: none
+#keyboard, #pianoBottomBar {
+  display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 500px) {
 
   #keyboard,
   #pianoBottomBar {
