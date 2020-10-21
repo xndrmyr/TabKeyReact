@@ -662,12 +662,13 @@ Button {
 @keyframes spin { 20%, 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 #keyboard {
-  display: flex;
+  display: inline-block;
   height: 200px;
   width: 100%;
   justify-content: center;
   transition: .3s;
   margin-top: 90px;
+
 }
 
 .whiteKey {
