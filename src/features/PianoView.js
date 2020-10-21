@@ -64,8 +64,8 @@ function PianoView() {
       dispatch(sort())
     }
     return (
-      <button className="whiteKey">
-        <div onClick={handleClick} style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
+      <button onClick={handleClick} className="whiteKey">
+        <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
       </button>
     )
   }
@@ -83,8 +83,8 @@ function PianoView() {
       dispatch(sort())
     }
     return (
-      <button className="blackKey">
-        <div onClick={handleClick} style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
+      <button  onClick={handleClick} className="blackKey">
+        <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
       </button>
     )
   }
