@@ -42,7 +42,7 @@ html {
   flex-flow: column;
   align-items: center;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 95vh;
   background-image: url("tkbg.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -139,7 +139,7 @@ nav ul li a {
 .navMenu{
   display: flex;
   flex-flow: column;
-  height: 100vh;
+  height: 95vh;
   margin: 0;
   padding: 0;
 }
@@ -645,9 +645,8 @@ Button {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  color: #fefffe;
-  display: none;
+  width: 100%;
+  color: #505050;
 }
 
 #landscapeCheck div {
@@ -670,8 +669,7 @@ Button {
   width: 100%;
   justify-content: center;
   transition: .3s;
-  margin-top: 90px;
-
+  margin-top: 20px
 }
 
 .whiteKey {
@@ -879,10 +877,6 @@ Button {
 
 #keyboard, #pianoBottomBar {
   display: flex;
-}
-
-#landscapeCheck {
-  display: none;
 }
 
 @media only screen and (min-width: 500px) {

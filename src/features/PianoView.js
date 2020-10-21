@@ -129,7 +129,7 @@ function PianoView() {
   return (
     <div id="pianoWrapper">
       <div id="landscapeCheck">
-        <div>Turn device to landscape to use piano keys!</div>
+        <div>Turn device to landscape if you need wider keys!</div>
         <div id="rotate"><i class="fas fa-sync-alt"></i></div>
       </div>
       <div id="keyboard">
