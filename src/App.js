@@ -13,6 +13,7 @@ import {useSelector} from "react-redux"
 
 const App = () => {
   const viewSelect = useSelector(state => state.keyCheck.viewSelect);
+  const activeCheck = useSelector(state => state.keyCheck.menuActive)
   const visible = {
     display: "flex",
     flexFlow: "column"
@@ -20,11 +21,15 @@ const App = () => {
   const invisible = {
     display: "none"
   }
+  const mainAdjust = [{
+    Height: "90vh"},{
+    flexGrow: "1"
+  }]
   return (
     <div className="App" id="top">
       <TopBar />
-      <div id="mainView">
-        <div style={viewSelect !== "guitar" ? invisible : visible}>
+      <div id="mainView" style={viewSelect !== "" ? mainAdjust[1] : mainAdjust[0]}>
+        <div style={viewSelect !== "guitar" || activeCheck ? invisible : visible}>
           <div className="cell"></div>
           <Sidebar />
           <GuitarTabView/>
@@ -32,16 +37,16 @@ const App = () => {
           <MusicKeyView />
           <RightBar />
         </div>
-        <div id="pianoView" style={viewSelect !== "piano" ? invisible : visible}>
+        <div id="pianoView" style={viewSelect !== "piano" || activeCheck ? invisible : visible}>
           <PianoView />
         </div>
-        <div id="footer">
+      </div>
+      <div id="footer">
           <div id="socials">
             <i className="fab fa-facebook"></i><i className="fab fa-twitter"></i><i className="fab fa-instagram"></i><i className="fab fa-linkedin-in"></i><i className="fab fa-github"></i><i className="fab fa-reddit"></i>
           </div>
           <div id="C">Copyright TabKey 2020</div>
         </div>
-      </div>
     </div>
   )
 }
