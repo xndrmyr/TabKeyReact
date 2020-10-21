@@ -15,6 +15,7 @@ function PianoView() {
   const refNotes = useSelector(state => state.keyCheck.refNotes)
   const noteStyles = [{ backgroundColor: "#DD403A" }, { backgroundColor: "#AE221E" }, { backgroundColor: "#EE4266" }, { backgroundColor: "#E01541" }, { backgroundColor: "#F77F00" }, { backgroundColor: "#B85F00" }, { backgroundColor: "#05668D" }, { backgroundColor: "#089DD9" }, { backgroundColor: "#B4EDD2" }, { backgroundColor: "#008148" }, { backgroundColor: "#00CC70" }, { backgroundColor: "#5D2A42" }, { backgroundColor: "#8D3F63" }, { backgroundColor: "transparent"}];
   let intervals = [];
+  const font = {fontFamily:'open_sans_condensedlight'}
   const [rootNote, setRootNote] = useState("")
   const modeNames = [
     "Ionian I (Major)",
@@ -192,7 +193,7 @@ function PianoView() {
            <ModeRow mode="Aeolian VI (minor)" intervals="W H W W H W W"/>
            <ModeRow mode="Locrian VII" intervals="H W W H W W W"/>
           </div>
-        <div id="pianoReset"><button onClick={pianoReset}>Reset</button></div>
+        <button onClick={pianoReset}>Reset</button>
       </div>
     </div>
   )

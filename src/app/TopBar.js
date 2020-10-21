@@ -54,8 +54,17 @@ function TopBar() {
   console.log(isActive)
   return (<>
     <div id="topBarWrapper">
-      <div id="tabkeyLogo">TabKey</div><div id="topBarSpace"></div>
+      <div id="tabkeyLogo">TabKey</div>
+      <div id="topBarSpace"></div>
       <div id="menuButton"><a href="#" class="menu" onClick={menuClick}>&#9776;</a></div>
+      <div id="largeNav">
+        <nav>
+        <ul>
+          <div className="largeNavButton" style={viewCheck === "guitar" ? chosen : unchosen} onClick={guitarView}><li>Guitar</li></div>
+          <div className="largeNavButton" style={viewCheck === "piano" ? chosen : unchosen} onClick={pianoView}><li>Piano</li></div>
+        </ul>
+        </nav>
+      </div>
     </div>
           <div id="navWrapper" className="drawer" style={activeCheck ? activeDrawer : unactiveDrawer}>
           <nav>

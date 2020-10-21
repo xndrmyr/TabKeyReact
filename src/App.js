@@ -29,7 +29,7 @@ const App = () => {
     <div className="App" id="top">
       <TopBar />
       <div id="mainView" style={viewSelect !== "" ? mainAdjust[1] : mainAdjust[0]}>
-        <div style={viewSelect !== "guitar" || activeCheck ? invisible : visible}>
+        <div id="guitarViews" style={viewSelect !== "guitar" || activeCheck ? invisible : visible}>
           <div className="cell"></div>
           <Sidebar />
           <GuitarTabView/>

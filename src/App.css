@@ -43,18 +43,24 @@ html {
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-  background-image: url("tkbg.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 }
+
+#GuitarTabView .string {
+  font-size: .75em;
+}
+
+@media only screen and (max-width: 375px){
 
 body {
   width: 100%;
   color: #fefffe;
   font-size: calc(12px + (16 - 12) * (100vw - 320px) / (850 - 320));
   background-color: #141414;
+  background-image: url("tkbg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 
 /*  TOPBAR STYLES  */
@@ -66,7 +72,6 @@ body {
   justify-content: center;
   width: 100%;
   height: 45px;
-  color: #fefffe;
   background-color: rgba(20, 20, 20, 1);
   position: fixed;
   z-index: 1;
@@ -78,6 +83,7 @@ body {
   width: 20%;
   font-family: 'kestoy_selfiekestoy_selfie';
   font-size: 1.5em;
+  color: #fefffe;
 }
 
 #topBarSpace {
@@ -85,6 +91,7 @@ body {
   width: 80%;
   height: 100%;
 }
+
 #menuButton {
   display: flex;
   width: 20%;
@@ -99,7 +106,9 @@ a.menu {
   font-weight: bold;
 }
 
-
+#largeNav {
+  display: none;
+}
 
 nav {
   display: flex;
@@ -245,7 +254,7 @@ nav ul li a {
   display: flex;
   flex-flow: column;
   width: 100%;
-  min-height: 350px;
+  height: 90vh;
   margin-top: 30px;
 }
 
@@ -255,17 +264,18 @@ nav ul li a {
 
 #wrapperGuitarTuning a {
   text-decoration: none;
+
+  
 }
 
 #wrapperGuitarTuning button {
   display: flex;
-  height: 4em;
-  width: 100%;
   justify-content: center;
   align-items: center;
   font-style: italic;
   font-family: "Roboto";
   font-size: .8em;
+  padding: 0;
 }
 
 .inner {
@@ -289,7 +299,8 @@ nav ul li a {
 
 .tuningButton {
   display: flex;
-  width: 100%;
+  width: 98vw;
+  height: 15vh
 }
 
 button {
@@ -502,11 +513,11 @@ Button {
   display: flex;
   background-color: #757575;
   justify-content: center;
-  height: 1.25em;
-  width: 1.25em;
-  border-radius: 1.25em;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
   font-family: 'open_sans_condensedlight';
-  font-size: .8em;
+  font-size: .825em;
   text-shadow: 1px 1px black;
 }
 
@@ -728,6 +739,7 @@ Button {
   width: 100%;
   position: absolute;
   justify-content: center;
+  max-width: 1000px
 }
 
 
@@ -749,10 +761,11 @@ Button {
   display: flex;
   position: absolute;
   height: 200px;
-  width: 100%;
+  width: 98%;
   justify-content: flex-end;
   background-color: transparent;
   pointer-events: none;
+  max-width: 1000px;
 }
 
 #rootNotification {
@@ -774,27 +787,21 @@ Button {
 #pianoBottomBar {
   display: flex;
   width: 100%;
-  min-height: 300px;
+  max-height: 300px;
   justify-content: center;
-  align-items: space-between;
+  align-items: space-evenly;
   flex-flow: row wrap;
 }
 
-#pianoReset {
+#pianoBottomBar button {
   display: flex;
-  width: 50%;
-  max-height: 130px;
   order: 2;
-}
-
-#pianoReset button {
-  display: flex;
   background-color: rgba(52, 10, 9, 0.3);
-  width: 100%;
+  width: 50%;
   color: #fefffe;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 100px;
   font-size: 1em;
 }
 
@@ -855,7 +862,7 @@ Button {
   font-size: 1em;
   justify-content: center;
   order: 3;
-  margin-bottom: 20px
+  margin: 20px 0;
 }
 
 #modeTable .row {
@@ -877,14 +884,176 @@ Button {
   display: flex;
 }
 
-@media only screen and (min-width: 500px) {
+}
 
-  #keyboard,
-  #pianoBottomBar {
-    display: flex;
-  }
+@media only screen and (min-width: 600px) {
 
   #landscapeCheck {
     display: none;
   }
+
+  #pianoBottomBar {
+    justify-content: space-evenly;
+    margin-top: 20px;
+    min-height: 200px
+  }
+
+  #scaleDiv {
+    order: 1;
+    width: 25%;
+    height: 100%;
+  }
+
+  #modeTable {
+    order: 2;
+    width: 35%;
+    height: 100%;
+    margin: 0;
+    font-size: .75em;
+
+  }
+  #pianoBottomBar button{
+    display: flex;
+    order: 3;
+    width: 25%;
+    height: 100%;
+    }
+
+    #lowEString,
+#AString,
+#DString,
+#GString,
+#BString,
+#HighEString {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: .25% 0;
 }
+  .note {
+font-size: .9em;
+font-family: 'open_sans_condensedbold';
+  }
+
+
+  }
+
+  @media only screen and (min-width: 1000px) {
+    #topBarWrapper {
+      display: flex;
+      width: 100%;
+    }
+#tabkeyLogo {
+  display: flex;
+  width: 15%;
+}
+    #topBarSpace {
+      display: flex;
+      max-width: 50%;
+    }
+
+    #menuButton, #navWrapper {
+      display: none;
+    }
+
+    nav {
+      font-size: .5em
+    }
+
+    #largeNav {
+      display: flex;
+      width: 35%;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    #largeNav ul {
+      display: flex;
+      flex-flow: row;
+      list-style: none;
+      width: 35%;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .largeNavButton, li {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 100px;
+      font-size: .75em;
+    }
+
+    #mainView {
+      display:flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+     #footer, #pianoView, #guitarViews {
+      display:flex;
+      width: 1000px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #wrapperGuitarTuning {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: space-between;
+      justify-content: space-between;
+      width: 100%;
+      height: 100px
+    }
+
+    #wrapperGuitarTuning .cell {
+      display: none;
+    }
+
+    .tuning-row {
+      display: flex;
+      flex-flow: row nowrap;
+      height: 100px
+    }
+
+    .tuningButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 100px;
+      font-size: .75em;
+    }
+
+    .tuningButton strong{
+      font-size: .75em;
+    }
+ 
+      .tuning-row a {
+        height: 100px
+      }
+
+      .inner span{
+        font-size: 10px;
+      }
+
+      .note {
+        font-size: 20px;
+        font-family: 'open_sans_condensedbold';
+      }
+      #lowEString,
+#AString,
+#DString,
+#GString,
+#BString,
+#HighEString {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+  }
