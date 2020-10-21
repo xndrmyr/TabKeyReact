@@ -73,11 +73,21 @@ body {
 
 #tabkeyLogo {
   display: flex;
-  justify-content: flex-start;
-  width: 50%;
+  justify-content: center;
+  width: 20%;
   font-family: 'kestoy_selfiekestoy_selfie';
   font-size: 1.5em;
-  margin-left: .75em;
+}
+
+#topBarSpace {
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+#menuButton {
+  display: flex;
+  width: 20%;
+  justify-content: center;
 }
 
 a.menu {
@@ -88,12 +98,7 @@ a.menu {
   font-weight: bold;
 }
 
-#menuButton {
-  display: flex;
-  width: 50%;
-  justify-content: flex-end;
-  margin-right: .75em;
-}
+
 
 nav {
   display: flex;

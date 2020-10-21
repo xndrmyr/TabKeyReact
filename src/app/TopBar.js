@@ -47,7 +47,7 @@ function TopBar() {
   console.log(menuActive)
   return (<>
     <div id="topBarWrapper">
-      <div id="tabkeyLogo">TabKey</div>
+      <div id="tabkeyLogo">TabKey</div><div id="topBarSpace"></div>
       <div id="menuButton"><a href="#" class="menu" onClick={menuClick}>&#9776;</a></div>
     </div>
           <div id="navWrapper" className="drawer" style={menuActive ? activeDrawer : unactiveDrawer}>
