@@ -54,6 +54,7 @@ body {
   width: 100%;
   color: #fefffe;
   font-size: calc(12px + (16 - 12) * (100vw - 320px) / (850 - 320));
+  background-color: #141414;
 }
 
 /*  TOPBAR STYLES  */
@@ -104,7 +105,6 @@ nav {
   display: flex;
   background-color: rgba(20, 20, 20, 1);
   z-index: 0;
-
 }
 
 nav ul{
@@ -139,7 +139,7 @@ nav ul li a {
 .navMenu{
   display: flex;
   flex-flow: column;
-  height:100vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -147,6 +147,8 @@ nav ul li a {
 #navWrapper {
   display: flex;
   width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 #navWrapper ul {
@@ -394,10 +396,9 @@ Button {
 #mainView {
   display: flex;
   flex-flow: column;
-  min-height: 100vh;
   height: 100%;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 /*  MUSIC KEY VIEW STYLES  */
@@ -605,7 +606,7 @@ Button {
   display: flex;
   flex-flow: column;
   width: 100%;
-  padding-bottom: 20px;
+
   align-items: center;
   justify-content: center
 }
@@ -645,7 +646,8 @@ Button {
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: #fefffe
+  color: #fefffe;
+  display: none;
 }
 
 #landscapeCheck div {
@@ -688,9 +690,10 @@ Button {
   flex-flow: column;
   background-color: black;
   height: 100%;
-  width: 7%;
+  width: 5%;
   justify-content: flex-end;
   align-items: center;
+  margin: 0 1%;
 }
 
 .spanSpacer {
@@ -713,8 +716,8 @@ Button {
 .blackKey span {
   display: flex;
   font-size: 1.25em;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   justify-content: center;
   align-items: center;
   color: #fefffe;
@@ -776,14 +779,16 @@ Button {
   width: 100%;
   height: 100%;
   min-height: 130px;
-  justify-content: space-between;
-  margin-bottom: 25px;
+  justify-content: center;
+  margin: 25px 0;
+  flex-flow: row wrap;
 }
 
 #pianoReset {
   display: flex;
-  width: 25%;
+  width: 50%;
   max-height: 130px;
+  order: 2;
 }
 
 #pianoReset button {
@@ -800,7 +805,8 @@ Button {
 #scaleDiv {
   display: flex;
   flex-flow: column;
-  width: 25%;
+  width: 50%;
+  order: 1;
 }
 
 #scaleDiv div {
@@ -848,10 +854,12 @@ Button {
 
 #modeTable {
   display: flex;
-  width: 40%;
+  width: 75%;
+  padding: 20px 0;
   flex-flow: column;
-  font-size: .825em;
+  font-size: 1em;
   justify-content: center;
+  order: 3;
 }
 
 #modeTable .row {
@@ -864,8 +872,17 @@ Button {
   align-items: flex-start;
 }
 
+#modeTable .cell:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
+}
+
 #keyboard, #pianoBottomBar {
   display: flex;
+}
+
+#landscapeCheck {
+  display: none;
 }
 
 @media only screen and (min-width: 500px) {

@@ -21,10 +21,14 @@ const App = () => {
   const invisible = {
     display: "none"
   }
+  const mainAdjust = [{
+    Height: "90vh"},{
+    flexGrow: "1"
+  }]
   return (
     <div className="App" id="top">
       <TopBar />
-      <div id="mainView">
+      <div id="mainView" style={viewSelect !== "" ? mainAdjust[1] : mainAdjust[0]}>
         <div style={viewSelect !== "guitar" || activeCheck ? invisible : visible}>
           <div className="cell"></div>
           <Sidebar />
@@ -36,13 +40,13 @@ const App = () => {
         <div id="pianoView" style={viewSelect !== "piano" || activeCheck ? invisible : visible}>
           <PianoView />
         </div>
-        <div id="footer">
+      </div>
+      <div id="footer">
           <div id="socials">
             <i className="fab fa-facebook"></i><i className="fab fa-twitter"></i><i className="fab fa-instagram"></i><i className="fab fa-linkedin-in"></i><i className="fab fa-github"></i><i className="fab fa-reddit"></i>
           </div>
           <div id="C">Copyright TabKey 2020</div>
         </div>
-      </div>
     </div>
   )
 }
