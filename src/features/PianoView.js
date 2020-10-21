@@ -66,7 +66,7 @@ function PianoView() {
     return (
       <button onClick={handleClick} className="whiteKey">
         <div class="spanSpacer"></div>
-        <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
+        <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><div style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</div></div>
       </button>
     )
   }
