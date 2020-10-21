@@ -678,6 +678,8 @@ Button {
   height: 100%;
   width: 7%;
   outline: .5em;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .blackKey {
@@ -686,7 +688,8 @@ Button {
   background-color: black;
   height: 100%;
   width: 7%;
-
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .spanSpacer {
