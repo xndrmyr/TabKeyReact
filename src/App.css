@@ -672,15 +672,21 @@ Button {
 
 .whiteKey {
   display: flex;
+  flex-flow: column;
   background-color: white;
   height: 100%;
   width: 7%;
   border-left: 1px solid black;
   color: black;
   align-items: flex-end;
-  -webkit-align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
   transition: .3s;
+}
+
+.spanSpacer {
+  display: flex;
+  width: 100%;
+  height: 50%;
 }
 
 .whiteKey div,
@@ -715,13 +721,13 @@ Button {
 
 .blackKey {
   display: flex;
+  flex-flow: column;
   background-color: black;
   height: 100%;
   width: 6%;
   margin: 0px 1%;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
-  -webkit-align-items: flex-end;
 }
 
 .keySpacer {

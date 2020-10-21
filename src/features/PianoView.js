@@ -65,6 +65,7 @@ function PianoView() {
     }
     return (
       <button onClick={handleClick} className="whiteKey">
+        <div class="spanSpacer"></div>
         <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
       </button>
     )
@@ -84,6 +85,7 @@ function PianoView() {
     }
     return (
       <button  onClick={handleClick} className="blackKey">
+        <div class="spanSpacer"></div>
         <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
       </button>
     )
