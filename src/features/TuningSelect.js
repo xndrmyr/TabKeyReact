@@ -54,6 +54,8 @@ function TuningButton(props) {
       dispatch(tuneTo(["E", "A", "D", "G", "B", "e", 4]))
       setTuningName("standard")
       dispatch(dropped(0))
+      document.getElementById("oneStepButton").disabled = false
+      document.getElementById("twoStepButton").disabled = false
     }
     function halfStep(){
       dispatch(clear())
@@ -61,6 +63,8 @@ function TuningButton(props) {
       dispatch(tuneTo(["Eb", "Ab", "Db", "Gb", "Bb", "eb", 3]))
       setTuningName("halfStep")
       dispatch(dropped(0))
+            document.getElementById("oneStepButton").disabled = false
+      document.getElementById("twoStepButton").disabled = false
     }
     function wholeStep(){
       dispatch(clear())
@@ -68,6 +72,8 @@ function TuningButton(props) {
       dispatch(tuneTo(["D", "G", "C", "F", "A", "d", 2]))
       setTuningName("wholeStep")
       dispatch(dropped(0))
+            document.getElementById("oneStepButton").disabled = false
+      document.getElementById("twoStepButton").disabled = false
     }
     function dropD(){
       dispatch(clear())
@@ -75,6 +81,8 @@ function TuningButton(props) {
       dispatch(tuneTo(["D", "A", "D", "G", "B", "e", 4]))
       setTuningName("dropD")
       dispatch(dropped(2))
+            document.getElementById("oneStepButton").disabled = false
+      document.getElementById("twoStepButton").disabled = false
 
     }
     function dropCSharp(){
@@ -83,6 +91,8 @@ function TuningButton(props) {
       dispatch(tuneTo(["C#", "A#", "C#", "F#", "A#", "d#", 3]))
       setTuningName("dropCSharp")
       dispatch(dropped(2))
+            document.getElementById("oneStepButton").disabled = false
+      document.getElementById("twoStepButton").disabled = false
 
     }
     function dropC(){
@@ -91,6 +101,8 @@ function TuningButton(props) {
       dispatch(tuneTo(["C", "G", "C", "F", "A", "d", 2]))
       setTuningName("dropC")
       dispatch(dropped(2))
+            document.getElementById("oneStepButton").disabled = false
+      document.getElementById("twoStepButton").disabled = false
  
     }
     
