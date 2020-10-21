@@ -1,0 +1,866 @@
+@font-face {
+  font-family: 'open_sans_condensedbold';
+  src: url('opensanscondensed-bold-webfont.woff2') format('woff2'),
+    url('opensanscondensed-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'open_sans_condensedlight';
+  src: url('opensanscondensed-light-webfont.woff2') format('woff2'),
+    url('opensanscondensed-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'roboto_monoregular';
+  src: url('robotomono-variablefont_wght-webfont.woff2') format('woff2'),
+    url('robotomono-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kestoy_selfiekestoy_selfie';
+  src: url('kestoy_selfie-webfont.woff2') format('woff2'),
+    url('kestoy_selfie-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("tkbg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+body {
+  width: 100%;
+  color: #fefffe;
+  font-size: calc(12px + (16 - 12) * (100vw - 320px) / (850 - 320));
+}
+
+/*  TOPBAR STYLES  */
+
+#topBarWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 45px;
+  color: #fefffe;
+  background-color: rgba(20, 20, 20, 1);
+  position: fixed;
+  z-index: 1;
+}
+
+#tabkeyLogo {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  font-family: 'kestoy_selfiekestoy_selfie';
+  font-size: 1.5em;
+  margin-left: .75em;
+}
+
+a.menu {
+  position: absolute;
+  z-index: 3;
+  border:1px solid white;
+  text-decoration: none;
+  top: 1.6em;
+  right: 1.6em;
+  color: #fff;
+  font-size: 0.65em;
+  padding: 0.4em 0.7em;
+  border-radius: 4px;
+}
+
+#menuButton {
+  display: flex;
+  width: 50%;
+}
+
+nav {
+  display: flex;
+  background-color: rgba(20, 20, 20, 1);
+  z-index: 0;
+
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  width: 100vw;
+  
+}
+nav ul li {
+  display:flex;
+  min-height: 45px;
+  max-height: 20%;
+  font-size: 2em;
+  font-family: "open_sans_condensedbold";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  background: rgba(0,0,0,0.3);
+  color: #fefffe;
+  }
+
+.drawer {
+  -webkit-transition:-webkit-transform 0.25s linear;
+  -moz-transition:-moz-transform 0.25s linear;
+  -o-transition:-o-transform 0.25s linear;
+  transition:transform 0.25s linear;
+}
+
+.navMenu{
+  display: flex;
+  flex-flow: column;
+  height:100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#navWrapper {
+  display: flex;
+  width: 100%;
+}
+
+#navWrapper ul {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+}
+
+.navButton {
+  display: flex;
+  width: 100%;
+  min-height: 45px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 0
+}
+
+/* Fallbacks */
+
+.no-csstransforms .top {
+  position: static;
+}
+
+.no-csstransforms .drawer nav {
+  display: none;
+}
+
+.no-csstransforms .drawer.active nav {
+  display: block;
+}
+
+/*  SIDEBAR STYLES  */
+
+
+.Sibebar {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: #fefffe;
+}
+
+#sideWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+#viewSelect {
+  display: flex;
+  flex-flow: row wrap;
+  max-height: 100px;
+  height: 100%;
+  font-style: italic;
+  justify-content: center;
+}
+
+#toggleWrapper {
+  display: flex;
+  flex-flow: row;
+  height: 20px;
+  width: 40px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.falseStyle {
+  background-color: #56615a;
+  justify-content: flex-end;
+}
+
+.trueStyle {
+  background-color: #04f06a;
+  justify-content: flex-start;
+}
+
+.toggleGreen {
+  background-color: green;
+}
+
+#toggleSwitch {
+  background-color: #fffcf9;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+}
+
+/*  TUNING SELECT STYLES  */
+#wrapperGuitarTuning {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  min-height: 350px;
+  margin-top: 30px;
+}
+
+#wrapperGuitarTuning .cell {
+  height: 100%;
+}
+
+#wrapperGuitarTuning a {
+  text-decoration: none;
+}
+
+#wrapperGuitarTuning button {
+  display: flex;
+  height: 4em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-family: "Roboto";
+  font-size: .8em;
+}
+
+.inner {
+  display: flex;
+  flex-flow: column;
+
+}
+
+.inner strong {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-size: 1.5em;
+}
+
+.tuning-row {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.tuningButton {
+  display: flex;
+  width: 100%;
+}
+
+button {
+  border: .1em solid #202020;
+  background-color: rgba(32, 32, 32, 0);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.chosen {
+  color: #04f06a;
+  background-color: #202020;
+}
+
+.unchosen button {
+  color: #fefffe;
+  border-color: #202020;
+
+}
+
+#wrapperGuitarTuning button:hover,
+#buttonWrapper button:hover {
+  background-color: rgba(32, 32, 32, .75);
+  transition: .3s;
+}
+
+/*  BUTTON CONTROL STYLES  */
+#buttonWrapper {
+  display: flex;
+  flex-flow: column;
+  margin: 10% 0;
+}
+
+#buttonWrapper button {
+  color: #fefffe;
+}
+
+Button {
+  user-select: none;
+}
+
+#buttonWrapper a {
+  display: flex;
+  text-decoration: none;
+}
+
+.userButton {
+  width: 50%;
+  height: 10vh;
+  background-color: transparent;
+}
+
+#correctionControls {
+  height: 45px;
+  display: flex;
+}
+
+#resetButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(52, 10, 9, 0.3);
+}
+
+#backspaceButton {
+  width: 35%;
+  height: 100%;
+  background-color: rgba(52, 10, 9, 0.3);
+}
+
+#toTopButton {
+  width: 15%;
+  height: 100%;
+  background-color: rgba(52, 10, 9, 0.3);
+}
+
+#toTopButton a {
+  color: #fefffe;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.invisible {
+  animation: FADE-OUT .3s;
+  opacity: 0;
+}
+
+.visible {
+  animation: FADE-IN .3s;
+}
+
+/*  MAIN STYLES  */
+#mainView {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+/*  MUSIC KEY VIEW STYLES  */
+#fullScale {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+#keyViewWrapper {
+  display: flex;
+  width: 100%;
+}
+
+#keysWrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 100%;
+}
+
+#majorKey,
+#minorKey {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 50%;
+  font-family: 'open_sans_condensedlight';
+  font-size: 1.5em;
+}
+
+#majorKey div,
+#minorKey div {
+  display: flex;
+  height: 100%;
+  min-height: 50px;
+}
+
+#keysWrapper span {
+  font-family: 'kestoy_selfiekestoy_selfie';
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  text-decoration: underline;
+}
+
+#fullScale {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  font-size: 45px;
+  width: 100%;
+  height: 100%;
+  font-family: 'open_sans_condensedbold';
+}
+
+#fullScale div {
+  min-width: 70px;
+  min-height: 70px;
+  width: 100%;
+  height: 100%
+}
+
+/*  GUITAR NECK VIEW STYLES  */
+#neckWrapper {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  min-height: 100px;
+}
+
+#neckView {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#neckView img {
+  height: 100%;
+  width: 100%
+}
+
+#strings {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  width: 100%;
+
+}
+
+#LowEString {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  height: 100%
+}
+
+.note {
+  display: flex;
+  background-color: #757575;
+  justify-content: center;
+  height: 1.25em;
+  width: 1.25em;
+  border-radius: 1.25em;
+  font-family: 'open_sans_condensedlight';
+  font-size: .8em;
+  text-shadow: 1px 1px black;
+}
+
+#lowEString,
+#AString,
+#DString,
+#GString,
+#BString,
+#HighEString {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+#guitarViews .cell {
+  min-height: 50px;
+}
+
+/*  GUITAR TAB VIEW STYLES  */
+#guitarAnchor {
+  height: 45px
+}
+
+#GuitarTabView {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "roboto_monoregular";
+  font-size: 1.75em;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.string {
+  display: flex;
+  flex-flow: row;
+}
+
+/*  RIGHTBAR STYLES */
+
+#RightBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+#RightBar span {
+  display: flex;
+  font-size: 1em;
+  font-family: "roboto";
+
+}
+
+#rightWrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  width: 65%;
+}
+
+.cell {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  min-height: 1.25em;
+}
+
+.titleCell {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  min-height: 1.5em;
+  justify-content: flex-start;
+}
+
+.modeCell {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  min-height: 1.5em;
+  justify-content: flex-end;
+}
+
+#footer {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center
+}
+
+#socials {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+#socials i {
+  font-size: 25px;
+}
+
+#C {
+  display:flex;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+/*  PIANO VIEW STYLES  */
+#pianoWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  align-items: center;
+}
+
+#landscapeCheck {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fefffe
+}
+
+#landscapeCheck div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45px;
+}
+
+#rotate i{
+    animation:spin 2s linear infinite;
+    font-size: 2em;
+}
+
+@keyframes spin { 20%, 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#pianoWrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin-top: 25px
+}
+
+#keyboard {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  justify-content: center;
+  transition: .3s;
+  z-index: 0;
+}
+
+.whiteKey {
+  display: flex;
+  background-color: white;
+  height: 100%;
+  width: 7%;
+  border-left: 1px solid black;
+  color: black;
+  align-items: flex-end;
+  justify-content: center;
+  transition: .3s;
+}
+
+.whiteKey div,
+.blackKey div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20%;
+}
+
+.whiteKey span,
+.blackKey span {
+  display: flex;
+  font-size: 1.5em;
+  border-radius: 100px;
+  height: 25%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fefffe;
+  text-shadow: 1px 1px 3px black;
+}
+
+#blackKeyWrapper {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+}
+
+.blackKey {
+  display: flex;
+  background-color: black;
+  max-height: 100px;
+  height: 100%;
+  width: 5%;
+  margin: 0 1%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.keySpacer {
+  display: flex;
+  background: transparent;
+  width: 7%;
+}
+
+.keyEnd {
+  display: flex;
+  background: transparent;
+  height: 50%;
+  width: 3.5%
+}
+
+#notificationWrapper {
+  display: flex;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+#rootNotification {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+  padding-bottom: 25px;
+  width: 50%;
+  font-size: 1.25em;
+  background-color: rgba(32, 32, 32, .75);
+  font-family: "roboto";
+}
+
+#pianoBottomBar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  justify-content: space-between;
+}
+
+#pianoReset {
+  display: flex;
+  width: 25%;
+}
+
+#pianoReset button {
+  display: flex;
+  background-color: rgba(52, 10, 9, 0.3);
+  width: 100%;
+  color: #fefffe;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1em;
+}
+
+#scaleDiv {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+}
+
+#scaleDiv div {
+  display: flex;
+  flex-flow: column;
+}
+
+#scaleDiv span {
+  display: flex;
+  align-items: flex-start;
+}
+
+.scaleDivTitle {
+  font-family: "roboto";
+  text-decoration: underline;
+}
+
+#scaleMode,
+#scaleRoot {
+  display: flex;
+  font-family: "kestoy_selfiekestoy_selfie";
+  font-size: 2em;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  min-height: 50px
+}
+
+#scaleRoot span {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#modeTable {
+  display: flex;
+  width: 40%;
+  flex-flow: column;
+}
+
+#modeTable .row {
+  display: flex;
+  width: 100%;
+}
+
+#modeTable .cell:first-child {
+  display: flex;
+  align-items: flex-start;
+}
+
+#keyboard,
+#pianoBottomBar {
+  display: none
+}
+
+@media only screen and (min-width: 768px) {
+
+  #keyboard,
+  #pianoBottomBar {
+    display: flex;
+  }
+
+  #landscapeCheck {
+    display: none;
+  }
+}
