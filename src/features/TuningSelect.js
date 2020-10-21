@@ -97,14 +97,14 @@ function TuningButton(props) {
 
     return (
       <div id="wrapperGuitarTuning">
-        <div className="tuning-row">
+ 
         <TuningButton tuningName="standard" className="tuningButton" onClick={standard} span="Standard" inner="E A D G B e" />
         <TuningButton tuningName="halfStep" className="tuningButton" onClick={halfStep} span="Half-step down" inner="Eb Ab Db Gb Bb eb" />
         <TuningButton tuningName="wholeStep" className="tuningButton" onClick={wholeStep} span="Whole-step down" inner="D G C F A d" />
         <TuningButton tuningName="dropD" className="tuningButton" onClick={dropD} span="Drop D" inner="D A D G B e" />
         <TuningButton tuningName="dropCSharp" className="tuningButton" onClick={dropCSharp} span="Drop C#" inner="C# G# C# F# A# d#" />
         <TuningButton tuningName="dropC" className="tuningButton" onClick={dropC} span="Drop C" inner="C G C F A d" />
-      </div>
+
       <div className="cell"></div>
       </div>
     )
