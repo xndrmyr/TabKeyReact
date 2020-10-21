@@ -279,7 +279,6 @@ nav ul li a {
 .inner {
   display: flex;
   flex-flow: column;
-
 }
 
 .inner strong {
@@ -296,7 +295,7 @@ nav ul li a {
 }
 
 .tuningButton {
-  display: flex;
+
   width: 98vw;
   height: 15vh
 }
