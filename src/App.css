@@ -42,7 +42,7 @@ html {
   flex-flow: column;
   align-items: center;
   width: 100vw;
-  min-height: 95vh;
+  min-height: 100vh;
   background-image: url("tkbg.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -139,7 +139,7 @@ nav ul li a {
 .navMenu{
   display: flex;
   flex-flow: column;
-  height: 95vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
