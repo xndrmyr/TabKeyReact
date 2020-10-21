@@ -59,6 +59,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  touch-action: manipulation;
 }
 
 /*  TOPBAR STYLES  */
