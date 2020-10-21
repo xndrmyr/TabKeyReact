@@ -676,11 +676,10 @@ Button {
   background-color: white;
   height: 100%;
   width: 7%;
-  border-left: 1px solid black;
+  outline: .5em;
   color: black;
   align-items: flex-end;
   justify-content: flex-end;
-  transition: .3s;
 }
 
 .spanSpacer {
@@ -701,7 +700,8 @@ Button {
 .whiteKey span,
 .blackKey span {
   display: flex;
-  font-size: 1.5em;
+  display: -webkit-flex;
+  font-size: 1.25em;
   height: 100%;
   width: 100%;
   justify-content: center;
