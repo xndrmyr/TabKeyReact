@@ -678,6 +678,7 @@ Button {
   border-left: 1px solid black;
   color: black;
   align-items: flex-end;
+  -webkit-align-items: flex-end;
   justify-content: center;
   transition: .3s;
 }
@@ -689,7 +690,6 @@ Button {
   height: 50%;
   transition: .3s;
   justify-content: center;
-  align-items: flex-end;
 }
 
 .whiteKey span,
@@ -721,6 +721,7 @@ Button {
   margin: 0px 1%;
   justify-content: center;
   align-items: flex-end;
+  -webkit-align-items: flex-end;
 }
 
 .keySpacer {
