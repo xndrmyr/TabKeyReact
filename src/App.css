@@ -747,7 +747,7 @@ Button {
   width: 100%;
   justify-content: flex-end;
   background-color: transparent;
-
+  pointer-events: none;
 }
 
 #rootNotification {
