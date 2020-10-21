@@ -13,7 +13,7 @@ function GuitarNeckView() {
   const dropped = useSelector(state => state.drop)
   const tuning = useSelector(state => state.tuning)
   const convScale = useSelector(state => state.convScale[0])
-  const refNotes = ["C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A", "A#", "B", "C"];
+  const refNotes = ["C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A", "A#", "B"];
   const adjust = tuning[0][tuning[0].length - 1];
   const noteStyles = [
     { backgroundColor: "#DD403A" }, 
@@ -197,7 +197,7 @@ function GuitarNeckView() {
     <div id="neckWrapper">
       <div id="neckView"><img src={guitarNeck} />
         <div id="strings">
-          <div id="AString">
+          <div id="highEString">
             <EStringNote index={0} class="note" style={{ marginLeft: "1.6%" }} />
             <EStringNote index={1} style={{ marginLeft: "8%" }} />
             <EStringNote index={2} style={{ marginLeft: "6.8%" }} />

@@ -497,7 +497,7 @@ Button {
   flex-flow: column;
   position: absolute;
   width: 100%;
-
+  height: .825
 }
 
 #LowEString {
@@ -515,7 +515,7 @@ Button {
   width: 100%;
   border-radius: 50%;
   font-family: 'open_sans_condensedlight';
-  font-size: .825em;
+  font-size: .75em;
   text-shadow: 1px 1px black;
 }
 
@@ -524,10 +524,12 @@ Button {
 #DString,
 #GString,
 #BString,
-#HighEString {
+#highEString {
   display: flex;
   align-items: center;
   width: 100%;
+  height: 100%;
+  margin: .25% 0;
 }
 
 
@@ -924,7 +926,7 @@ Button {
 #DString,
 #GString,
 #BString,
-#HighEString {
+#highEString {
   display: flex;
   align-items: center;
   width: 100%;
