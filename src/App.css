@@ -865,7 +865,7 @@ Button {
 }
 
 #keyboard, #pianoBottomBar {
-  display: none;
+  display: flex;
 }
 
 @media only screen and (min-width: 500px) {
