@@ -13,6 +13,7 @@ import {useSelector} from "react-redux"
 
 const App = () => {
   const viewSelect = useSelector(state => state.keyCheck.viewSelect);
+  const activeCheck = useSelector(state => state.keyCheck.menuActive)
   const visible = {
     display: "flex",
     flexFlow: "column"
@@ -24,7 +25,7 @@ const App = () => {
     <div className="App" id="top">
       <TopBar />
       <div id="mainView">
-        <div style={viewSelect !== "guitar" ? invisible : visible}>
+        <div style={viewSelect !== "guitar" || activeCheck ? invisible : visible}>
           <div className="cell"></div>
           <Sidebar />
           <GuitarTabView/>
@@ -32,7 +33,7 @@ const App = () => {
           <MusicKeyView />
           <RightBar />
         </div>
-        <div id="pianoView" style={viewSelect !== "piano" ? invisible : visible}>
+        <div id="pianoView" style={viewSelect !== "piano" || activeCheck ? invisible : visible}>
           <PianoView />
         </div>
         <div id="footer">

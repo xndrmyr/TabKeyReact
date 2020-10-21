@@ -158,7 +158,8 @@ nav ul li a {
 .navButton {
   display: flex;
   width: 100%;
-  min-height: 45px;
+  height: 10%;
+  min-height: 55px;
   justify-content: center;
   align-items: center;
   font-family: 'Roboto', sans-serif;
@@ -815,13 +816,20 @@ Button {
 .scaleDivTitle {
   font-family: "roboto";
   text-decoration: underline;
+  font-size: .75em;
+}
+#scaleRoot{
+  font-family: "kestoy_selfiekestoy_selfie";
+}
+
+#scaleMode{
+  font-family: 'open_sans_condensedlight';
 }
 
 #scaleMode,
 #scaleRoot {
   display: flex;
-  font-family: "kestoy_selfiekestoy_selfie";
-  font-size: 2em;
+  font-size: 1.5em;
   height: 100%;
   width: 100%;
   align-items: center;

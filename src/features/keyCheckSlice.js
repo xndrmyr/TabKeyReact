@@ -36,18 +36,20 @@ export const keyCheckSlice = createSlice({
         ],
         refNotes: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"],
         viewSelect: "guitar",
+        menuActive: false
     },
     reducers: {
         set: (state, action) => {state.value = action.payload},
         setKey: (state, action) => {state.musicKey = action.payload},
         setIndex: (state, action) => {state.musicKeyIndex = action.payload},
         resetKeyCheck: (state) => {state.value = false},
-        select: (state, action) => {state.viewSelect = action.payload}
+        select: (state, action) => {state.viewSelect = action.payload},
+        isActive: (state, action) => {state.menuActive = action.payload}
     }
 },
 
 )
 
 export default keyCheckSlice.reducer
-export const {set, setKey, setIndex, resetKeyCheck, viewSelect, select} = keyCheckSlice.actions
+export const {set, setKey, setIndex, resetKeyCheck, viewSelect, select, isActive} = keyCheckSlice.actions
 export const selectKeyCheck = state => state
