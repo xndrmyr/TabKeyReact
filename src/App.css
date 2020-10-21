@@ -46,7 +46,7 @@ html {
 }
 
 #GuitarTabView .string {
-  font-size: .75em;
+  font-size: 1em;
 }
 
 body {
@@ -885,7 +885,9 @@ Button {
 
 
 @media only screen and (min-width: 600px) {
-
+#GuitarTabView .string {
+    font-size: 1.5em;
+  }
   #landscapeCheck {
     display: none;
   }
@@ -1037,6 +1039,10 @@ font-family: 'open_sans_condensedbold';
 
       .inner span{
         font-size: 10px;
+      }
+
+      #GuitarTabView .string {
+        font-size: 50px
       }
 
       .note {
