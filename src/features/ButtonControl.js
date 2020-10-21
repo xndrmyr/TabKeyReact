@@ -75,8 +75,8 @@ function ButtonControl() {
       </div>
       <div id="correctionControls">
         <button id="resetButton" onClick={handleReset}>Reset</button>
-        <button id="backspaceButton" onClick={handleBackspace} >&#9664;</button>
-        <button id="toTopButton"><a href="#top"><div className="animate__animated animate__fadeOutUp animate__infinite animate__slow">&#9650;</div></a></button>
+        <button id="backspaceButton" onClick={handleBackspace} ><i class="fas fa-caret-left"></i></button>
+        <button id="toTopButton"><a href="#top"><div><i class="fas fa-caret-up"></i></div></a></button>
       </div>
     </div>
   );
