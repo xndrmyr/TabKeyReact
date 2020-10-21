@@ -678,7 +678,14 @@ Button {
   height: 100%;
   width: 7%;
   outline: .5em;
-  color: black;
+}
+
+.blackKey {
+  display: flex;
+  flex-flow: column;
+  background-color: black;
+  height: 100%;
+  width: 7%;
 
 }
 
@@ -718,14 +725,7 @@ Button {
   justify-content: center;
 }
 
-.blackKey {
-  display: flex;
-  flex-flow: column;
-  background-color: black;
-  height: 100%;
-  width: 6%;
-  margin: 0px 1%;
-}
+
 
 .keySpacer {
   display: flex;
