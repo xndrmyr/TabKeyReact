@@ -13,9 +13,9 @@ function PianoView() {
   const dispatch = useDispatch();
   const scale = useSelector(state => state.scale)
   const refNotes = useSelector(state => state.keyCheck.refNotes)
-  const noteStyles = [{ backgroundColor: "#DD403A" }, { backgroundColor: "#AE221E" }, { backgroundColor: "#EE4266" }, { backgroundColor: "#E01541" }, { backgroundColor: "#F77F00" }, { backgroundColor: "#B85F00" }, { backgroundColor: "#05668D" }, { backgroundColor: "#089DD9" }, { backgroundColor: "#B4EDD2" }, { backgroundColor: "#008148" }, { backgroundColor: "#00CC70" }, { backgroundColor: "#5D2A42" }, { backgroundColor: "#8D3F63" }, { backgroundColor: "transparent"}];
+  const noteStyles = [{ backgroundColor: "#DD403A" }, { backgroundColor: "#AE221E" }, { backgroundColor: "#EE4266" }, { backgroundColor: "#E01541" }, { backgroundColor: "#F77F00" }, { backgroundColor: "#B85F00" }, { backgroundColor: "#05668D" }, { backgroundColor: "#089DD9" }, { backgroundColor: "#B4EDD2" }, { backgroundColor: "#008148" }, { backgroundColor: "#00CC70" }, { backgroundColor: "#5D2A42" }, { backgroundColor: "#8D3F63" }, { backgroundColor: "transparent" }];
   let intervals = [];
-  const font = {fontFamily:'open_sans_condensedlight'}
+  const font = { fontFamily: 'open_sans_condensedlight' }
   const [rootNote, setRootNote] = useState("")
   const modeNames = [
     "Ionian I (Major)",
@@ -42,8 +42,8 @@ function PianoView() {
     opacity: 100,
   }
   const display = [
-    {display: "none"},
-    {display: "flex"}
+    { display: "none" },
+    { display: "flex" }
   ]
 
   function pianoReset() {
@@ -85,7 +85,7 @@ function PianoView() {
       dispatch(sort())
     }
     return (
-      <button  onClick={handleClick} className="blackKey">
+      <button onClick={handleClick} className="blackKey">
         <div class="spanSpacer"></div>
         <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
       </button>
@@ -111,15 +111,15 @@ function PianoView() {
   }
 
   function ModeRow(props) {
-    return(
-    <div className="row">
-    <div className="cell">
-    <span>{props.mode}</span>
-    </div>
-    <div className="cell">
-      <span>{props.intervals}</span>
-    </div>
-  </div>
+    return (
+      <div className="row">
+        <div className="cell">
+          <span>{props.mode}</span>
+        </div>
+        <div className="cell">
+          <span>{props.intervals}</span>
+        </div>
+      </div>
     )
   }
 
@@ -134,11 +134,11 @@ function PianoView() {
         <div id="rotate"><i class="fas fa-sync-alt"></i></div>
       </div>
       <div id="keyboard">
-      <div id="notificationWrapper">
+        <div id="notificationWrapper">
           <div id="rootNotification" style={scale.length > 0 ? display[0] : display[1]}>
             <div>Lowest note is the root!</div>
-            </div>
           </div>
+        </div>
         <WhiteKey inner="C" position={0} />
         <WhiteKey inner="D" position={2} />
         <WhiteKey inner="E" position={4} />
@@ -171,28 +171,28 @@ function PianoView() {
           <div className="keyEnd" />
         </div>
       </div>
-    
+
       <div id="pianoBottomBar">
         <div id="scaleDiv">
           <div><span className="scaleDivTitle">Root</span>
-          <div id="scaleRoot"><span style={scale[0] < 12 ? noteStyles[scale[0]] : scale[0] >= 12 ? noteStyles[(scale[0] - 12)] : noteStyles[13]}>
-            {scale[0] < 12 ? refNotes[scale[0]] : scale[0] >= 12 ? refNotes[(scale[0] - 12)] : ""}
+            <div id="scaleRoot"><span style={scale[0] < 12 ? noteStyles[scale[0]] : scale[0] >= 12 ? noteStyles[(scale[0] - 12)] : noteStyles[13]}>
+              {scale[0] < 12 ? refNotes[scale[0]] : scale[0] >= 12 ? refNotes[(scale[0] - 12)] : ""}
             </span>
             </div>
           </div>
           <div><span className="scaleDivTitle">Scale</span>
-          <div id="scaleMode">{intervalNames.indexOf(intervals.toString()) > -1 ? modeNames[intervalNames.indexOf(intervals.toString())] : intervals[6] ? "Scale not found!" : ""}</div>
+            <div id="scaleMode">{intervalNames.indexOf(intervals.toString()) > -1 ? modeNames[intervalNames.indexOf(intervals.toString())] : intervals[6] ? "Scale not found!" : ""}</div>
           </div>
         </div>
         <div id="modeTable">
-           <ModeRow mode="Ionian I (Major)" intervals="W W H W W W H"/>
-           <ModeRow mode="Dorian II" intervals="W W H W W W H"/>
-           <ModeRow mode="Phyrigian III" intervals="H W W W H W W"/>
-           <ModeRow mode="Lydian IV" intervals="W W W H W W H"/>
-           <ModeRow mode="Mixolydian V" intervals="W W H W W H W"/>
-           <ModeRow mode="Aeolian VI (minor)" intervals="W H W W H W W"/>
-           <ModeRow mode="Locrian VII" intervals="H W W H W W W"/>
-          </div>
+          <ModeRow mode="Ionian I (Major)" intervals="W W H W W W H" />
+          <ModeRow mode="Dorian II" intervals="W W H W W W H" />
+          <ModeRow mode="Phyrigian III" intervals="H W W W H W W" />
+          <ModeRow mode="Lydian IV" intervals="W W W H W W H" />
+          <ModeRow mode="Mixolydian V" intervals="W W H W W H W" />
+          <ModeRow mode="Aeolian VI (minor)" intervals="W H W W H W W" />
+          <ModeRow mode="Locrian VII" intervals="H W W H W W W" />
+        </div>
         <button onClick={pianoReset}>Reset</button>
       </div>
     </div>
