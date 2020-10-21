@@ -10,7 +10,8 @@ function TopBar() {
   const [menuActive, setMenuActive] = useState(false)
   const unactiveDrawer = {
     transform: "translate3d(0, -100vh, 0)",
-    position: "absolute"
+    position: "absolute",
+    zIndex: "9"
   }
   const activeDrawer = {
     transform: "translate3d(0, 45px, 0)"

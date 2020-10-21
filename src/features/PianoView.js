@@ -133,6 +133,11 @@ function PianoView() {
         <div id="rotate"><i class="fas fa-sync-alt"></i></div>
       </div>
       <div id="keyboard">
+      <div id="notificationWrapper">
+          <div id="rootNotification" style={scale.length > 0 ? display[0] : display[1]}>
+            <div>Lowest note is the root!</div>
+            </div>
+          </div>
         <WhiteKey inner="C" position={0} />
         <WhiteKey inner="D" position={2} />
         <WhiteKey inner="E" position={4} />
@@ -164,11 +169,6 @@ function PianoView() {
           <BlackKey inner="A#" position={22} />
           <div className="keyEnd" />
         </div>
-        <div id="notificationWrapper">
-          <div id="rootNotification" style={scale.length > 0 ? display[0] : display[1]}>
-            <div>Lowest note is the root!</div>
-            </div>
-          </div>
       </div>
     
       <div id="pianoBottomBar">

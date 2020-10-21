@@ -667,7 +667,7 @@ Button {
   width: 100%;
   justify-content: center;
   transition: .3s;
-  margin-top: 45px;
+  margin-top: 90px;
 }
 
 .whiteKey {
@@ -678,8 +678,7 @@ Button {
   width: 7%;
   outline: .5em;
   color: black;
-  align-items: flex-end;
-  justify-content: flex-end;
+
 }
 
 .spanSpacer {
@@ -700,7 +699,6 @@ Button {
 .whiteKey span,
 .blackKey span {
   display: flex;
-  display: -webkit-flex;
   font-size: 1.25em;
   height: 100%;
   width: 100%;
@@ -726,8 +724,6 @@ Button {
   height: 100%;
   width: 6%;
   margin: 0px 1%;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .keySpacer {
@@ -749,22 +745,24 @@ Button {
   height: 200px;
   width: 100%;
   justify-content: flex-end;
-  align-items: flex-end;
   background-color: transparent;
-  pointer-events: none;
+
 }
 
 #rootNotification {
   display: flex;
-  position: absolute;
   justify-content: center;
   align-items: flex-end;
-  height: 200px;
-  padding-bottom: 25px;
+  height: 100%;
   width: 50%;
   font-size: 1.25em;
-  background-color: rgba(32, 32, 32, .75);
+  background-color: rgba(20, 20, 20, .9);
   font-family: "roboto";
+  z-index: 1;
+}
+
+#rootNotification div {
+  padding-bottom: 40px;
 }
 
 #pianoBottomBar {
