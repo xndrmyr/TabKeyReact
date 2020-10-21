@@ -29,6 +29,7 @@ function TuningSelect() {
 
     const unchosen = {
     color: "#fefffe",
+    backgroundColor: "rgba(14, 14, 14, .01)",
     }
 
 function TuningButton(props) {
