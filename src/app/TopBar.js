@@ -37,13 +37,31 @@ function TopBar() {
     dispatch(isActive(false))
     dispatch(reset())
   }
+
+  function HowTo() {
+    dispatch(select("howTo"))
+    dispatch(isActive(false))
+    dispatch(reset())
+  }
+
+  function FAQ() {
+    dispatch(select("FAQ"))
+    dispatch(isActive(false))
+    dispatch(reset())
+  }
+
   function menuClick() {
     if (activeCheck === true){
         if (prevView === "guitar") {
         dispatch(select("guitar"))
       } else if (prevView === "piano") {
         dispatch(select("piano"))
+      } else if (prevView === "howTo") {
+        dispatch(select("howTo"))
+      } else if (prevView === "FAQ") {
+        dispatch(select("FAQ"))
       }
+      
     dispatch(isActive(false))
     } else {
       dispatch(isActive(true))
@@ -56,12 +74,14 @@ function TopBar() {
     <div id="topBarWrapper">
       <div id="tabkeyLogo">TabKey</div>
       <div id="topBarSpace"></div>
-      <div id="menuButton"><a href="#" class="menu" onClick={menuClick}>&#9776;</a></div>
+      <div id="menuButton"><a href="#" className="menu" onClick={menuClick}>&#9776;</a></div>
       <div id="largeNav">
         <nav>
         <ul>
-          <div className="largeNavButton" style={viewCheck === "guitar" ? chosen : unchosen} onClick={guitarView}><li>Guitar</li></div>
-          <div className="largeNavButton" style={viewCheck === "piano" ? chosen : unchosen} onClick={pianoView}><li>Piano</li></div>
+          <a href="#"><div className="largeNavButton" style={viewCheck === "guitar" ? chosen : unchosen} onClick={guitarView}><li>Guitar</li></div></a>
+          <a href="#"><div className="largeNavButton" style={viewCheck === "piano" ? chosen : unchosen} onClick={pianoView}><li>Piano</li></div></a>
+          <a href="#"><div className="largeNavButton" style={viewCheck === "howTo" ? chosen : unchosen} onClick={HowTo}><li>How-To</li></div></a>
+          <a href="#"><div className="largeNavButton" style={viewCheck === "FAQ" ? chosen : unchosen} onClick={FAQ}><li>FAQ</li></div></a>
         </ul>
         </nav>
       </div>
@@ -71,9 +91,8 @@ function TopBar() {
           <ul className="navMenu">
             <div className="navButton" onClick={guitarView} style={prevView === "guitar" ? chosen : unchosen}><li>Guitar</li></div>
             <div className="navButton" onClick={pianoView} style={prevView === "piano" ? chosen : unchosen}><li>Piano</li></div>
-            <div className="navButton" style={viewCheck === "howto" ? chosen : unchosen}><li>How-To</li></div>
-            <div className="navButton" style={viewCheck === "faq" ? chosen : unchosen}><li>FAQ</li></div>
-            <div className="navButton" style={viewCheck === "ipsum" ? chosen : unchosen}><li>Ipsum</li></div>
+            <div className="navButton" onClick={HowTo} style={prevView === "howTo" ? chosen : unchosen}><li>How-To</li></div>
+            <div className="navButton" onClick={FAQ} style={prevView === "FAQ" ? chosen : unchosen}><li>FAQ</li></div>
           </ul>
           </nav>
   

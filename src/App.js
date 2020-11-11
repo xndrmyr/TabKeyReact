@@ -5,6 +5,8 @@ import GuitarTabView from './features/GuitarTabView'
 import GuitarNeckView from './features/GuitarNeckView'
 import MusicKeyView from './features/musicKeyView'
 import PianoView from './features/PianoView'
+import HowTo from './features/HowTo'
+import FAQ from './features/FAQ'
 import RightBar from './app/RightBar'
 import React, {
   useState
@@ -39,6 +41,12 @@ const App = () => {
         </div>
         <div id="pianoView" style={viewSelect !== "piano" || activeCheck ? invisible : visible}>
           <PianoView />
+        </div>
+        <div id="howToView" style={viewSelect !== "howTo" || activeCheck ? invisible : visible}>
+          <HowTo />
+        </div>
+        <div id="FAQ" style={viewSelect !== "FAQ" || activeCheck ? invisible : visible}>
+          <FAQ />
         </div>
       </div>
       <div id="footer">

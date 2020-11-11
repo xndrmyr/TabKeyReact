@@ -36,12 +36,28 @@ html {
   scroll-behavior: smooth;
 }
 
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.collapseContent {
+  padding: 0 18px;
+  display: none;
+  overflow: block;
+  background-color: #f1f1f1;
+}
+
 .App {
   text-align: center;
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 100vw;
+  width: 99vw;
   min-height: 100vh;
 }
 
@@ -408,7 +424,7 @@ Button {
   display: flex;
   flex-flow: column;
   height: 100%;
-  width: 100%;
+  width: 99vw;
   justify-content: center;
 }
 
@@ -568,14 +584,12 @@ Button {
   justify-content: center;
   align-items: center;
   width: 100%;
-
 }
 
 #RightBar span {
   display: flex;
-  font-size: 1em;
+  font-size: 14px;
   font-family: "roboto";
-
 }
 
 #rightWrapper {
@@ -584,6 +598,7 @@ Button {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .row {
@@ -597,7 +612,6 @@ Button {
   display: flex;
   flex-flow: column;
   width: 100%;
-  min-height: 1.25em;
 }
 
 .titleCell {
@@ -611,7 +625,6 @@ Button {
   display: flex;
   flex-flow: row;
   width: 100%;
-  min-height: 1.5em;
   justify-content: flex-end;
 }
 
@@ -649,7 +662,7 @@ Button {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: 85vh;
+  min-height: 90vh;
   margin-top: 45px;
 }
 
@@ -871,7 +884,7 @@ Button {
   display: flex;
   width: 75%;
   flex-flow: column;
-  font-size: 1em;
+  font-size: 14px;
   justify-content: center;
   order: 3;
   margin: 20px 0;
@@ -898,6 +911,111 @@ Button {
 }
 
 
+/*  HOWTO STYLES  */
+#HowTo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#howToWrapper {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  min-height: 85vh;
+  margin-top: 47px;
+}
+
+#howToWrapper span {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 50px 0;
+}
+
+#howToWrapper p {
+  text-align: justify;
+  font-size: 1em;
+}
+
+#gneckhow img {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+/*  FAQ STYLES  */
+
+#FAQWrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#FAQ {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 95vh;
+  height: 100%;
+  flex-grow: 3;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#FAQWrapper button {
+  font-size: 1.625em;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#show
+{
+display:none; 
+}
+
+.collapsible {
+  background-color:transparent;
+  color: #fefffe;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid rgba(32, 32, 32, 1);
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible div {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active, .collapsible:hover {
+  background-color: rgba(32, 32, 32, .8)
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #141414;
+}
+
+.content p {
+  text-justify: inter-word;
+  text-align: justify;
+  font-size: 1em;
+}
+
+.coll-wrapper {
+  width: 100%;
+}
 
 @media only screen and (min-width: 600px) {
   #GuitarTabView .string {
@@ -953,6 +1071,27 @@ Button {
     font-family: 'open_sans_condensedbold';
   }
 
+  #correctionControls {
+    height: 65px;
+  }
+
+  #HowTo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #HowTo span {
+    font-size: 2em;
+  }
+
+  #HowTo p {
+    font-size: 1.25em;
+  }
+
+  #howToWrapper {
+    width: 600px;
+  }
 
 }
 
@@ -983,9 +1122,9 @@ Button {
 
   #largeNav {
     display: flex;
-    width: 35%;
     justify-content: center;
     align-items: center;
+    width: 35%;
   }
 
   #largeNav ul {
@@ -995,8 +1134,20 @@ Button {
     width: 35%;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
+  }
+
+  #correctionControls {
+    height: 85px;
+    display: flex;
+  }
+
+  #largeNav a {
+    text-decoration: none;
+  }
+
+  #largeNav a:hover {
+    background-color: black;
+    transition: .5s;
   }
 
   .largeNavButton,
@@ -1085,4 +1236,16 @@ Button {
     width: 100%;
     margin: 0;
   }
+
+  #howToWrapper {
+    width: 60%;
+  }
+
+  #HowTo p {
+    font-size: 1em;
+  }
 }
+
+
+
+

@@ -66,7 +66,7 @@ function PianoView() {
     }
     return (
       <button onClick={handleClick} className="whiteKey">
-        <div class="spanSpacer"></div>
+        <div className="spanSpacer"></div>
         <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><div style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</div></div>
       </button>
     )
@@ -86,7 +86,7 @@ function PianoView() {
     }
     return (
       <button onClick={handleClick} className="blackKey">
-        <div class="spanSpacer"></div>
+        <div className="spanSpacer"></div>
         <div style={scale.indexOf(props.position) >= 0 ? chosen : unchosen}><span style={noteStyles[refNotes.indexOf(props.inner)]}>{props.inner}</span></div>
       </button>
     )
@@ -131,7 +131,7 @@ function PianoView() {
     <div id="pianoWrapper">
       <div id="landscapeCheck">
         <div>Turn device to landscape if you need wider keys!</div>
-        <div id="rotate"><i class="fas fa-sync-alt"></i></div>
+        <div id="rotate"><i className="fas fa-sync-alt"></i></div>
       </div>
       <div id="keyboard">
         <div id="notificationWrapper">
